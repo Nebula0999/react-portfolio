@@ -8,27 +8,27 @@ const projects = [
   {
     title: 'Savings Tracker',
     decription: 'A django project that tracks contributions from a google sheet',
-    image: '../projects/bg3.png',
+    image: '../projects/contri.png',
     tags: ['Django', 'HTML', 'CSS', 'Render'],
-    link: "#",
+    link: "https://notifier-dpvz.onrender.com/",
     githubrepo: "#"
   },
   {
     title: 'Workout Tracker',
     decription: 'A React project that uses supabase in the backend and wger api to fetch and store user exercises',
-    image: '../projects/bg3.png',
+    image: '../projects/workout.png',
     tags: ['React', 'Supabase', 'Tailwind', 'Render'],
-    link: "#",
+    link: "https://capstone-project-woad.vercel.app/",
     githubrepo: "#" 
   },
-  {
-    title: 'Blog App',
-    decription: 'A django app that allows users to fetch and read news from various opensource APIs',
-    image: '../projects/bg3.png',
-    tags: ['Django', 'HTML', 'CSS', 'PostgreSQL', 'Render'],
-    link: "#",
-    githubrepo: "#"
-  }
+  // {
+  //   title: 'Blog App',
+  //   decription: 'A django app that allows users to fetch and read news from various opensource APIs',
+  //   image: '../projects/bg3.png',
+  //   tags: ['Django', 'HTML', 'CSS', 'PostgreSQL', 'Render'],
+  //   link: "#",
+  //   githubrepo: "#"
+  // }
 ]
 function Projects() {
   return (
@@ -62,10 +62,10 @@ function Projects() {
                 <div className='absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60'/>
                 {/* overlay links */}
                 <div className='absolute inset-0 flex items-center justify-center gap-4 opacity-0 hover:opacity-100 transition-opacity duration-300'>
-                  <a href={project.link} className='p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all'>
+                  <a href={project.link} target='_blank' rel='noopener noreferrer' className='p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all'>
                     <ArrowUpRight className='w-5 h-5'/>
                   </a>
-                  <a href={project.githubrepo} className='p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all'>
+                  <a href={project.githubrepo} target='_blank' rel='noopener noreferrer' className='p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all'>
                     <FaGithub className='w-5 h-5'/>
                   </a>
                 </div>

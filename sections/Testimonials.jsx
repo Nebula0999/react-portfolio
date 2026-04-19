@@ -3,23 +3,29 @@ import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Allan is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are impressive.",
-    author: "John Doe",
-    role: "Product Manager",
-    company: "Tech Corp",
+    quote: "To be updated with a testimonial from a real person. I'm working on it later.",
+    author: "Allan Nabule",
+    role: "Software Developer",
+    company: "Personal Portfolio",
   },
-  {
-    quote: "Working with Allan was a pleasure. He is a talented professional who brings both technical expertise and a collaborative spirit to every project.",
-    author: "Jane Smith",
-    role: "Design Lead",
-    company: "Creative Solutions",
-  },
-  {
-    quote: "Allan's technical skills and dedication to excellence have significantly contributed to our project's success.",
-    author: "Alice Johnson",
-    role: "Engineering Manager",
-    company: "Innovate Inc",
-  },
+  // {
+  //   quote: "Allan is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are impressive.",
+  //   author: "John Doe",
+  //   role: "Product Manager",
+  //   company: "Tech Corp",
+  // },
+  // {
+  //   quote: "Working with Allan was a pleasure. He is a talented professional who brings both technical expertise and a collaborative spirit to every project.",
+  //   author: "Jane Smith",
+  //   role: "Design Lead",
+  //   company: "Creative Solutions",
+  // },
+  // {
+  //   quote: "Allan's technical skills and dedication to excellence have significantly contributed to our project's success.",
+  //   author: "Alice Johnson",
+  //   role: "Engineering Manager",
+  //   company: "Innovate Inc",
+  // },
 ]
 
 function Testimonials() {
@@ -62,7 +68,7 @@ function Testimonials() {
 
             <div className='flex items-center gap-4'>
               <div>
-                <div className='font-semibold'>{testimonials[activeIdx].author}</div>
+                <div className='font-semibold'>{testimonials[0].author}</div>
                 <div className='text-sm text-muted-foreground'>{testimonials[activeIdx].role}, {testimonials[0].company}</div>
               </div>
             </div>
@@ -75,7 +81,7 @@ function Testimonials() {
           </button>
           <div className='flex gap-2'>
             {testimonials.map((_, idx) => (
-            <button onClick={() => setActiveIdx(idx)} className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIdx ? "w-8 bg-primary" : "bg-muted-foreground/30 hover:bg-muted-foreground/50" }`}/>
+            <button onClick={() => {setActiveIdx(idx)}} className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIdx ? "w-8 bg-primary" : "bg-muted-foreground/30 hover:bg-muted-foreground/50" }`}/>
           ))}
             </div>
             <button onClick={next} className='p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all'>

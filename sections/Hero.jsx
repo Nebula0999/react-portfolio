@@ -24,6 +24,16 @@ const skills = [
 ]
 
 function Hero() {
+
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/projects/Allan_Nabule_CV.pdf";
+        link.download = "Allan_Nabule_CV.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
   return (
     <section className='relative min-h-screen flex items-center overflow-hidden'>
         {/* Bg */}
@@ -83,11 +93,11 @@ function Hero() {
                     </div>
                     {/* CTAs */}
                     <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
-                        <Button size='lg'>
-                            Contact Me
+                        <Button size='lg' >
+                            <a href="#contact">Contact Me</a>
                             <ArrowRight className='w-5 h-5' />
                         </Button>
-                        <AnimatedBorderButton>
+                        <AnimatedBorderButton onClick={handleDownload}>
                             <Download className='w-5 h-5'/>
                              Download CV
                         </AnimatedBorderButton>
@@ -96,7 +106,7 @@ function Hero() {
                     <div className='flex items-center gap-4 animate-fade-in animation-delay-400'>
                         <span className='text-sm text-muted-foreground'>Follow me: </span>
                         {[
-                            { icon: FaGithub, href: "https://github.com/Nebula077" },
+                            { icon: FaGithub, href: "https://github.com/Nebula0999" },
                             { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/allan-nabule-540638292/" },
                             { icon: FaXTwitter, href: "https://twitter.com/nabule_allan" },
                             { icon: FaInstagram, href: "https://www.instagram.com/allannabule/" },
@@ -104,6 +114,7 @@ function Hero() {
                         <a 
                         key={idx} 
                         href={social.href}
+                        target='_blank'
                         className='p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300'>
                             {<social.icon className='w-5 h-5' />}</a>
                         ))}

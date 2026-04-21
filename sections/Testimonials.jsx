@@ -3,7 +3,7 @@ import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "To be updated with a testimonial from a real person. I'm working on it later.",
+    quote: "Working with me is on of the decisions you can make. I bring my skills and experience to every project. With my resilience, creativity, and passion, I ensure that every project is a success.",
     author: "Allan Nabule",
     role: "Software Developer",
     company: "Personal Portfolio",

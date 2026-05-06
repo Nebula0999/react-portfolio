@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
 import AnimatedBorderButton from '../components/AnimatedBorderButton'
@@ -21,14 +20,14 @@ const projects = [
     link: "https://capstone-project-woad.vercel.app/",
     githubrepo: "#" 
   },
-  // {
-  //   title: 'Blog App',
-  //   decription: 'A django app that allows users to fetch and read news from various opensource APIs',
-  //   image: '../projects/bg3.png',
-  //   tags: ['Django', 'HTML', 'CSS', 'PostgreSQL', 'Render'],
-  //   link: "#",
-  //   githubrepo: "#"
-  // }
+  {
+    title: 'Realtime chat app',
+    decription: 'A django app that allows users to fetch and read news from various opensource APIs',
+    image: '../projects/chat_app.png',
+    tags: ['React', 'Supabase', 'Tailwind', 'Google Cloud', 'Vercel'],
+    link: "https://chat-7ezt.vercel.app",
+    githubrepo: "#"
+  }
 ]
 function Projects() {
   return (
